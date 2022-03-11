@@ -4,7 +4,7 @@
       <h1>
         <center><strong> My Work Experience</strong></center>
       </h1>
-      <br>
+      <br />
       <FormKit type="group" v-model="formData">
         <!-- Nom Société -->
         <FormKit
@@ -59,6 +59,7 @@
       <pre class="form-data">{{ formData }}</pre>
     </div>
   </div>
+  <br /><br /><br />
 </template>
 
 <script>

@@ -1,7 +1,8 @@
 <template>
-  <Project></Project>
-  <Education>></Education>
+  <CompleteIdentityCard></CompleteIdentityCard>
+  <Education></Education>
   <WorkExperience></WorkExperience>
+  <Project></Project>
 
   <div class="selection:bg-green-100"></div>
 </template>

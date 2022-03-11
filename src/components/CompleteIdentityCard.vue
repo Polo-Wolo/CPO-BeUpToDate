@@ -88,10 +88,10 @@
       <pre class="form-data">{{ formData }}</pre>
     </div>
   </div>
+  <br /><br /><br />
 </template>
 
 <script>
-
 import { ref } from "vue";
 
 export default {
