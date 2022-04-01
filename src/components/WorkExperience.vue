@@ -46,6 +46,7 @@
           validation="required|before:2010-01-01"
           validation-visibility="live"
         />
+        
         <!-- Content -->
         <FormKit
           type="textarea"

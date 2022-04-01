@@ -8,17 +8,17 @@
       <FormKit type="group" v-model="formData">
         <!-- Nom -->
         <FormKit
-          name="nom"
+          name="Name"
           label="Nom"
-          placeholder="Entre ton nom ici"
+          placeholder="Entrez votre nom ici"
           validation="required"
           validation-behavior="live"
         />
         <!-- Prénom -->
         <FormKit
-          name="Prénom"
+          name="First Name"
           label="Prénom"
-          placeholder="Entre ton prénom ici"
+          placeholder="Entrez votre prénom ici"
           validation="required"
           validation-behavior="live"
         />
@@ -27,31 +27,31 @@
           type="file"
           label="Photo de profil"
           accept=".pdf,.jpg,.png,.psd,.jpeg,.jfif"
-          help="Sélectionner une photo"
+          help="Sélectionnez une photo"
           multiple
         />
         <!-- Date de naissance -->
         <FormKit
           type="date"
           value="2011-01-01"
-          label="Birthday"
-          help="Entrer votre date de naissance"
+          label="Date de naissance"
+          help="Entrez votre date de naissance"
           validation="required|before:2010-01-01"
           validation-visibility="live"
         />
         <!-- Email -->
         <FormKit
           type="email"
-          label="Email address"
-          help="Entrer votre adresse email"
-          validation="required|email|ends_with:.edu,.com,.fr"
+          label="Adresse mail"
+          help="Entrez votre adresse email"
+          validation="email|ends_with:.edu,.com,.fr"
           validation-visibility="live"
-          placeholder="vikas@school.edu"
+          placeholder="exemple.adresse@gmail.com"
         />
         <!-- Telephone -->
         <FormKit
           type="tel"
-          label="Phone number"
+          label="Numéro de téléphone"
           placeholder="xx xx xx xx xx"
           validation="matches:/^[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$/"
           :validation-messages="{
@@ -59,29 +59,19 @@
               'Le numéro de portable doit être sous le format xx xx xx xx xx',
           }"
           validation-visibility="dirty"
+          help="Le numéro de portable doit être sous le format xx xx xx xx xx"
         />
-        <!-- Opinion - Radio choice -->
+        <!-- Opinion - Color Choice -->
         <FormKit
-          name="Mode"
-          label="Mode"
-          help="Quel mode préférez-vous dans votre portfolio ?"
-          type="radio"
-          value="Black"
-          :options="['White', 'Black']"
+          type="color"
+          name="Couleur"
+          label="Couleur Portfolio"
+          placeholder="Sample color placeholder"
+          help="Quelle couleur préférez-vous dans votre portfolio ?"
+          validation="required"
+          value="#3eaf7c"
+          error-behavior="live"
         />
-        <!-- Range bar -->
-        <div class="side-by-side">
-          <FormKit
-            name="Niveau de nullité de Pierrig en codage"
-            label="Niveau de nullité de Pierrig en codage"
-            v-model="recommendation"
-            help=" Quel est le niveau de nullité de Pierrig en codage sur une échelle de 1 à 10 ?"
-            type="range"
-            min="0"
-            max="9"
-          />
-          <pre class="range-output">{{ recommendation }} </pre>
-        </div>
       </FormKit>
 
       <h2>Modeled group values</h2>
