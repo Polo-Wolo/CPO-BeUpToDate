@@ -5,6 +5,7 @@
         <center><strong>BeUpToDate</strong></center>
       </h1>
 
+
       <FormKit type="group" v-model="formData">
         <!-- Nom -->
         <FormKit
