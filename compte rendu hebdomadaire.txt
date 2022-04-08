@@ -11,3 +11,21 @@ tests des fonctionnalités en ligne sur des playground temporaires
 A faire
 Expliciter le ReadMe
 continuer
+
+08/04/2022
+
+Avancement maquette Figma
+Avancement ProjectView du Template
+ - carousel
+ - content
+ - details bar
+ - title
+ 
+Découverte des outils de développement WEB utilisés lors du projet : Vue3
+tutoriels explicatifs de base
+tests des fonctionnalités en ligne sur des playground temporaires
+
+A faire
+Responsive Project View
+Import data for Project View
+Routing project View
