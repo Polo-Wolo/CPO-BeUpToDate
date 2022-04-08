@@ -1,0 +1,13 @@
+01/04/2022
+
+Création du Gantt
+Avancement Maquette Figma
+Avancement ProjectView du Template et du Portfolio
+Découverte des outils de développement WEB utilisés lors du projet : Vue3
+installation Vue3, Vite, TailwindCSS, FormKit
+tutoriels explicatifs de base
+tests des fonctionnalités en ligne sur des playground temporaires
+
+A faire
+Expliciter le ReadMe
+continuer
