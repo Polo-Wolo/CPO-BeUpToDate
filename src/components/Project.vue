@@ -8,12 +8,13 @@
       <FormKit type="group" v-model="formData">
         <!-- Nom Projet -->
         <FormKit
-          name="project_name"
+          name="title"
           label="Nom du projet"
           placeholder="Entrer le nom du projet"
           validation="required"
           validation-behavior="live"
         />
+        <!--Durré du projet pas représenté pareil dans le diagramme de classe.-->
         <!--Start Project-->
         <FormKit
           type="date"

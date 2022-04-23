@@ -1,5 +1,5 @@
 <template>
-  <CompleteIdentityCard></CompleteIdentityCard>
+  <IdentityCard></IdentityCard>
   <Education></Education>
   <WorkExperience></WorkExperience>
   <Project></Project>
@@ -11,6 +11,6 @@
 import { defineComponent } from "vue";
 import Project from "./components/Project.vue";
 import Education from "./components/Education.vue";
-import CompleteIdentityCard from "./components/CompleteIdentityCard.vue";
+import IdentityCard from "./components/personnal_info/IdentityCard.vue";
 import WorkExperience from "./components/WorkExperience.vue";
 </script>

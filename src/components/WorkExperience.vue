@@ -8,7 +8,7 @@
       <FormKit type="group" v-model="formData">
         <!-- Nom Société -->
         <FormKit
-          name="employer"
+          name="company"
           label="Nom de l'entreprise"
           placeholder="Entrer le nom de l'entreprise"
           validation="required"
@@ -23,11 +23,12 @@
         />
         <!-- Lien -->
         <FormKit
-          name="link"
+          name="company_link"
           label="Lien de la société"
           placeholder="Entrer le lien de l'entreprise"
           validation-behavior="live"
         />
+        <!--Durré de travail pas représenté parail dans le diagramme de classe.-->
         <!--Start Work Experience-->
         <FormKit
           type="date"
@@ -56,6 +57,13 @@
           label="Décriver votre expérience"
           rows="10"
           placeholder="Remember to write in complete sentences."
+        />
+
+        <FormKit
+          type="select"
+          name="type"
+          label="Sélectionner le type de l'expérience"
+          :options="['Stage', 'CDI', 'CDD', 'Job étudiant']"
         />
       </FormKit>
 

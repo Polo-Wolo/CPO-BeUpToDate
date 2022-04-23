@@ -16,7 +16,7 @@
         />
         <!-- Prénom -->
         <FormKit
-          name="first_name"
+          name="surname"
           label="Prénom"
           placeholder="Entrez votre prénom ici"
           validation="required"
@@ -75,6 +75,7 @@
           value="#3eaf7c"
           error-behavior="live"
         />
+        <Adress />
       </FormKit>
 
       <h2>Modeled group values</h2>
@@ -86,8 +87,10 @@
 
 <script>
 import { ref } from "vue";
+import Adress from "./Adress.vue";
 
 export default {
+  components: { Adress },
   setup() {
     const recommendation = ref("9");
     const formData = ref({});
