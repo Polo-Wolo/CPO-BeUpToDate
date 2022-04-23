@@ -2,7 +2,7 @@
   <div class="container">
     <div class="sample-input">
       <h1>
-        <center><strong>My Education</strong></center>
+        <strong>My Education</strong>
       </h1>
       <br />
       <FormKit type="group" v-model="formData">

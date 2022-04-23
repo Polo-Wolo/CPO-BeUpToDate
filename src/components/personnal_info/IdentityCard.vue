@@ -2,7 +2,7 @@
   <div class="container">
     <div class="sample-input">
       <h1>
-        <center><strong>Identity</strong></center>
+        <strong>Identity</strong>
       </h1>
 
       <FormKit type="group" v-model="formData">

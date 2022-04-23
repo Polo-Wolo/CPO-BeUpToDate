@@ -1,5 +1,17 @@
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 /*Renomer les composants.*/
-#app {
+#app,
+#Collapsable {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8,17 +20,19 @@
 }
 
 .container {
+  /*> * */
   margin: auto;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
 }
 
-.side-by-side {
+/*ça change rien sans.*/
+/*.side-by-side {
   display: flex;
   align-items: flex-start;
-}
+}*/
 
-pre.range-output {
+/*pre.range-output {
   background: #eee;
   border-radius: 0.5em;
   text-align: center;
@@ -28,13 +42,13 @@ pre.range-output {
   padding: 0.5em;
   line-height: 1;
   width: 1.5em;
-}
+}*/
 
-pre.form-data {
+/*pre.form-data {
   box-sizing: border-box;
   background: #eee;
   border: 1px solid #ccc;
   width: 100%;
   padding: 1em;
   border-radius: 0.5em;
-}
+}*/
