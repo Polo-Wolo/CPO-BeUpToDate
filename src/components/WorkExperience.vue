@@ -95,44 +95,4 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-.container {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-
-.side-by-side {
-  display: flex;
-  align-items: flex-start;
-}
-
-pre.range-output {
-  background: #eee;
-  border-radius: 0.5em;
-  text-align: center;
-  margin-left: 1em;
-  margin-top: 1.5em;
-  font-weight: bold;
-  padding: 0.5em;
-  line-height: 1;
-  width: 1.5em;
-}
-
-pre.form-data {
-  box-sizing: border-box;
-  background: #eee;
-  border: 1px solid #ccc;
-  width: 100%;
-  padding: 1em;
-  border-radius: 0.5em;
-}
-</style>
+<style src="./style.css"/>
