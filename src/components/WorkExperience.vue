@@ -8,7 +8,7 @@
       <FormKit type="group" v-model="formData">
         <!-- Nom Société -->
         <FormKit
-          name="Society"
+          name="employer"
           label="Nom de l'entreprise"
           placeholder="Entrer le nom de l'entreprise"
           validation="required"
@@ -16,14 +16,14 @@
         />
         <!-- Lieu de l'expérience -->
         <FormKit
-          name="Place"
+          name="location"
           label="Lieu de l'expérience professionnelle"
           placeholder="Entrer le nom du lieu"
           validation-behavior="live"
         />
         <!-- Lien -->
         <FormKit
-          name="Link"
+          name="link"
           label="Lien de la société"
           placeholder="Entrer le lien de l'entreprise"
           validation-behavior="live"
@@ -31,6 +31,7 @@
         <!--Start Work Experience-->
         <FormKit
           type="date"
+          name="start_date"
           value="2011-01-01"
           label="Début de votre expérience professionnelle"
           help="Entrer la date de début de votre expérience professionnelle"
@@ -40,16 +41,18 @@
         <!-- End Work Experience-->
         <FormKit
           type="date"
+          name="end_date"
           value="2011-01-01"
           label="Fin de l'expérience professionnelle"
           help="Entrer la date de fin de votre expérience professionnelle"
           validation="required|before:2010-01-01"
           validation-visibility="live"
         />
-        
+
         <!-- Content -->
         <FormKit
           type="textarea"
+          name="description"
           label="Décriver votre expérience"
           rows="10"
           placeholder="Remember to write in complete sentences."

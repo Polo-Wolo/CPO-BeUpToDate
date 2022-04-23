@@ -5,11 +5,10 @@
         <center><strong>BeUpToDate</strong></center>
       </h1>
 
-
       <FormKit type="group" v-model="formData">
         <!-- Nom -->
         <FormKit
-          name="Name"
+          name="name"
           label="Nom"
           placeholder="Entrez votre nom ici"
           validation="required"
@@ -17,7 +16,7 @@
         />
         <!-- Prénom -->
         <FormKit
-          name="First Name"
+          name="first_name"
           label="Prénom"
           placeholder="Entrez votre prénom ici"
           validation="required"
@@ -26,14 +25,15 @@
         <!--File import (Photo) -->
         <FormKit
           type="file"
+          name="profile_picture"
           label="Photo de profil"
           accept=".pdf,.jpg,.png,.psd,.jpeg,.jfif"
           help="Sélectionnez une photo"
-          multiple
         />
         <!-- Date de naissance -->
         <FormKit
           type="date"
+          name="birth_date"
           value="2011-01-01"
           label="Date de naissance"
           help="Entrez votre date de naissance"
@@ -43,6 +43,7 @@
         <!-- Email -->
         <FormKit
           type="email"
+          name="email"
           label="Adresse mail"
           help="Entrez votre adresse email"
           validation="email|ends_with:.edu,.com,.fr"
@@ -52,6 +53,7 @@
         <!-- Telephone -->
         <FormKit
           type="tel"
+          name="phone_number"
           label="Numéro de téléphone"
           placeholder="xx xx xx xx xx"
           validation="matches:/^[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$/"
@@ -65,7 +67,7 @@
         <!-- Opinion - Color Choice -->
         <FormKit
           type="color"
-          name="Couleur"
+          name="color"
           label="Couleur Portfolio"
           placeholder="Sample color placeholder"
           help="Quelle couleur préférez-vous dans votre portfolio ?"

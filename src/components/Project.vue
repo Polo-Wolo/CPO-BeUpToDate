@@ -4,11 +4,11 @@
       <h1>
         <center><strong> My Project </strong></center>
       </h1>
-        <br>
+      <br />
       <FormKit type="group" v-model="formData">
         <!-- Nom Projet -->
         <FormKit
-          name="Name Project"
+          name="project_name"
           label="Nom du projet"
           placeholder="Entrer le nom du projet"
           validation="required"
@@ -17,6 +17,7 @@
         <!--Start Project-->
         <FormKit
           type="date"
+          name="start_date"
           value="2011-01-01"
           label="Début de votre projet"
           help="Entrer la date de début de votre projet"
@@ -26,6 +27,7 @@
         <!-- End Project-->
         <FormKit
           type="date"
+          name="end_date"
           value="2011-01-01"
           label="Fin  de votre projet"
           help="Entrer la date de fin de votre projet"
@@ -35,6 +37,7 @@
         <!-- Content -->
         <FormKit
           type="textarea"
+          name="description"
           label="Décriver votre projet"
           rows="10"
           placeholder="Remember to write in complete sentences."
@@ -43,6 +46,7 @@
         <!--Photo du projet (à voir si on fait avec direct import photo ou url?-->
         <FormKit
           type="file"
+          name="pictures"
           label="Photo du projet"
           accept=".pdf,.jpg,.png,.psd,.jpeg,.jfif"
           help="Sélectionner une photo de votre projet"
@@ -54,9 +58,9 @@
       <pre class="form-data">{{ formData }}</pre>
     </div>
   </div>
-   <br>
-    <br>
-     <br>
+  <br />
+  <br />
+  <br />
 </template>
 
 <script>
