@@ -29,3 +29,16 @@ A faire
 Responsive Project View
 Import data for Project View
 Routing project View
+
+29/04/2022
+
+Responsive Project View
+Ajoute du champs pliable (masquable)
+Prototype d'ajout et de supression de formulaire avec des boutons
+Remonter les données des form vers le parent
+
+
+A faire
+Responsive Project View
+Import data for Project View
+Routing project View

@@ -13,6 +13,7 @@
           placeholder="Entrer le nom du projet"
           validation="required"
           validation-behavior="live"
+          @change="emitUpdate()"
         />
         <!--Durré du projet pas représenté pareil dans le diagramme de classe.-->
         <!--Start Project-->
@@ -68,6 +69,11 @@
 import { ref } from "vue";
 
 export default {
+  mounted() {
+    console.log("mounted!");
+    console.log(this.formData);
+    this.$emit("EmptyProject", this.formData);
+  },
   setup() {
     const recommendation = ref("9");
     const formData = ref({});
@@ -77,9 +83,14 @@ export default {
       formData,
     };
   },
+  emits: ["UpdateProject", "EmptyProject"],
   methods: {
     PrintConsole: function () {
       console.log("Button click");
+    },
+    emitUpdate: function () {
+      console.log("Update");
+      this.$emit("UpdateProject");
     },
   },
 };
