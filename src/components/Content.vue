@@ -3,27 +3,44 @@
     <Collapsable>
       <template v-slot:header>
         <strong><p>Project</p></strong>
+        <!-- Je peux rien éxécuter dans le click sans erreurs -->
+        <FormKit type="button" label="add project" @click="console.log()" />
       </template>
       <Project @UpdateProject="testUpdate" @EmptyProject="emptyProject" />
+      <div class="list_project" v-for="project in projects" :key="project">
+        <!-- <FormKit
+          type="text"
+          :label="field.label"
+          v-model="field.content"
+          :delay="100"
+        /> -->
+        <Project />
+        <FormKit type="button" label="delete project" />
+        <!-- <p>{{ project }}</p> -->
+      </div>
     </Collapsable>
+
     <Collapsable>
       <template v-slot:header>
         <strong><p>IdentityCard</p></strong>
       </template>
       <IdentityCard />
     </Collapsable>
+
     <Collapsable>
       <template v-slot:header>
         <strong><p>Education</p></strong>
       </template>
       <Education />
     </Collapsable>
+
     <Collapsable>
       <template v-slot:header>
         <strong><p>WorkExperience</p></strong>
       </template>
       <WorkExperience />
     </Collapsable>
+
     <Collapsable>
       <template v-slot:header>
         <strong><p>CV</p></strong>
@@ -55,7 +72,7 @@ export default {
   data() {
     return {
       empty_project: {},
-      projects: {},
+      projects: Array(),
       educations: {},
       work_experiences: {},
       identity: { adress: {} },
@@ -66,11 +83,13 @@ export default {
     testUpdate() {
       console.log("testUpdate");
     },
-    emptyProject(event, formData) {
+    /*Event handler
+    Reçoit les données des champs vides du projet quand le component est monté.*/
+    emptyProject(formData) {
       console.log("emptyProject");
       this.empty_project = formData;
-      //La donné n'arrive pas ici...
       console.log(formData);
+      this.projects.push(formData);
     },
   },
 };
