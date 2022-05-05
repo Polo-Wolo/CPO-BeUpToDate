@@ -3,21 +3,25 @@
     <Collapsable>
       <template v-slot:header>
         <strong><p>Project</p></strong>
-        <!-- Je peux rien éxécuter dans le click sans erreurs -->
-        <FormKit type="button" label="add project" @click="console.log()" />
+        <FormKit type="button" label="add project" @click="addProject()" />
       </template>
-      <Project @UpdateProject="testUpdate" @EmptyProject="emptyProject" />
-      <div class="list_project" v-for="project in projects" :key="project">
-        <!-- <FormKit
-          type="text"
-          :label="field.label"
-          v-model="field.content"
-          :delay="100"
-        /> -->
-        <Project />
-        <FormKit type="button" label="delete project" />
+      <div
+        class="list_project"
+        v-for="(project, index) in projects"
+        :key="project"
+      >
+        <Project v-model="project[index]" />
+        <h2>Modeled group values in Content</h2>
+        <pre>{{ project[index] }}</pre>
+        <FormKit
+          type="button"
+          label="delete project"
+          @click="deleteProject(index)"
+        />
         <!-- <p>{{ project }}</p> -->
       </div>
+      <h2>Modeled group values in Content</h2>
+      <pre>{{ projects }}</pre>
     </Collapsable>
 
     <Collapsable>
@@ -73,8 +77,8 @@ export default {
     return {
       empty_project: {},
       projects: Array(),
-      educations: {},
-      work_experiences: {},
+      educations: Array(),
+      work_experiences: Array(),
       identity: { adress: {} },
       CV: {},
     };
@@ -83,14 +87,23 @@ export default {
     testUpdate() {
       console.log("testUpdate");
     },
-    /*Event handler
-    Reçoit les données des champs vides du projet quand le component est monté.*/
-    emptyProject(formData) {
-      console.log("emptyProject");
-      this.empty_project = formData;
-      console.log(formData);
-      this.projects.push(formData);
+    addProject() {
+      console.log("addProject");
+      this.projects.push(this.empty_project);
     },
+    deleteProject(index) {
+      console.log("deleteProject");
+      this.projects.splice(index, 1);
+      //this.projects.push(this.empty_project);
+    },
+    // /*Event handler
+    // Reçoit les données des champs vides du projet quand le component est monté.*/
+    // emptyProject(formData) {
+    //   console.log("emptyProject");
+    //   this.empty_project = formData;
+    //   console.log(formData);
+    //   this.projects.push(formData);
+    // },
   },
 };
 </script>

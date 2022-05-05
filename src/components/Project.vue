@@ -3,9 +3,10 @@
     <div class="sample-input">
       <h1>
         <strong> My Project </strong>
+        <FormKit type="button" label="Validate" @click="updateValue" />
       </h1>
       <br />
-      <FormKit type="group" v-model="formData">
+      <FormKit type="group" v-model="modelValue">
         <!-- Nom Projet -->
         <FormKit
           name="title"
@@ -13,7 +14,6 @@
           placeholder="Entrer le nom du projet"
           validation="required"
           validation-behavior="live"
-          @change="emitUpdate()"
         />
         <!--Durré du projet pas représenté pareil dans le diagramme de classe.-->
         <!--Start Project-->
@@ -57,7 +57,7 @@
       </FormKit>
 
       <h2>Modeled group values</h2>
-      <pre class="form-data">{{ formData }}</pre>
+      <pre class="form-data">{{ modelValue }}</pre>
     </div>
   </div>
   <br />
@@ -69,28 +69,41 @@
 import { ref } from "vue";
 
 export default {
-  mounted() {
-    console.log("mounted!");
-    console.log(this.formData);
-    this.$emit("EmptyProject", this.formData);
+  // mounted() {
+  //   console.log("mounted!");
+  //   //console.log(this.formData);
+  //   this.$emit("EmptyProject", this.modelValue);
+  // },
+  props: {
+    //v-model
+    modelValue: "",
   },
-  setup() {
-    const recommendation = ref("9");
-    const formData = ref({});
+  setup(props, context) {
+    //const recommendation = ref("9");
+    //const formData = ref({});
+
+    // //v-model
+    // const updateValue = (event) => {
+    //   console.log(this.modelValue);
+    //   context.emit("update:modelValue", this.modelValue);
+    // };
 
     return {
-      recommendation,
-      formData,
+      //recommendation,
+      //formData,
+      //updateValue,
     };
   },
-  emits: ["UpdateProject", "EmptyProject"],
+  //emits: [],
   methods: {
     PrintConsole: function () {
       console.log("Button click");
     },
-    emitUpdate: function () {
-      console.log("Update");
-      this.$emit("UpdateProject");
+
+    //v-model
+    updateValue: function () {
+      console.log(this.modelValue);
+      context.emit("update:modelValue", this.modelValue);
     },
   },
 };

@@ -2,7 +2,12 @@
   <div class="container">
     <slot name="header"></slot>
     <br />
-    <button @click="toggleContent()">ToggleContent</button>
+    <!-- <button @click="toggleContent()">ToggleContent</button> -->
+    <FormKit
+      type="button"
+      :label="'ToggleContent : ' + show_content"
+      @click="toggleContent()"
+    />
     <br />
     <div class="content" v-if="show_content">
       <br />
@@ -30,4 +35,4 @@ export default {
   },
 };
 </script>
-<!-- <style src="./style.css"/>-->
+<style src="./style.css"/>
