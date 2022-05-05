@@ -11,8 +11,6 @@
         :key="project"
       >
         <Project v-model="project[index]" />
-        <h2>Modeled group values in Content</h2>
-        <pre>{{ project[index] }}</pre>
         <FormKit
           type="button"
           label="delete project"

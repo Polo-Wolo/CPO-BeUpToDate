@@ -3,10 +3,10 @@
     <div class="sample-input">
       <h1>
         <strong> My Project </strong>
-        <FormKit type="button" label="Validate" @click="updateValue" />
+        <!-- <FormKit type="button" label="Validate" @input="updateValue" /> -->
       </h1>
       <br />
-      <FormKit type="group" v-model="modelValue">
+      <FormKit type="group" v-model="modelValue" @input="updateValue">
         <!-- Nom Projet -->
         <FormKit
           name="title"
@@ -66,44 +66,20 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { defineComponent } from "vue";
 
 export default {
-  // mounted() {
-  //   console.log("mounted!");
-  //   //console.log(this.formData);
-  //   this.$emit("EmptyProject", this.modelValue);
-  // },
+  name: "Project",
+  components: {},
   props: {
-    //v-model
     modelValue: "",
   },
-  setup(props, context) {
-    //const recommendation = ref("9");
-    //const formData = ref({});
-
-    // //v-model
-    // const updateValue = (event) => {
-    //   console.log(this.modelValue);
-    //   context.emit("update:modelValue", this.modelValue);
-    // };
-
-    return {
-      //recommendation,
-      //formData,
-      //updateValue,
-    };
+  data() {
+    return {};
   },
-  //emits: [],
   methods: {
-    PrintConsole: function () {
-      console.log("Button click");
-    },
-
-    //v-model
-    updateValue: function () {
-      console.log(this.modelValue);
-      context.emit("update:modelValue", this.modelValue);
+    updateValue(event) {
+      this.$emit("update:modelValue", this.modelValue);
     },
   },
 };
