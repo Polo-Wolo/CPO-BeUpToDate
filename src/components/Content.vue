@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <!-- <Collapsable>
+    <Collapsable>
       <template v-slot:header>
         <strong><p>Project</p></strong>
       </template>
@@ -26,19 +26,6 @@
           </Collapsable>
         </div>
       </div>
-      <h2>Modeled group values in Content</h2>
-      <pre>{{ projects }}</pre>
-    </Collapsable> -->
-
-    <Collapsable>
-      <template v-slot:header>
-        <strong><p>Project</p></strong>
-      </template>
-      <Listable v-model="projects">
-        <Collapsable>
-          <Project />
-        </Collapsable>
-      </Listable>
       <h2>Modeled group values in Content</h2>
       <pre>{{ projects }}</pre>
     </Collapsable>
@@ -76,7 +63,6 @@
 <script>
 import { defineComponent } from "vue";
 import Collapsable from "./Collapsable.vue";
-import Listable from "./Listable.vue";
 import Project from "./Project.vue";
 import Education from "./Education.vue";
 import IdentityCard from "./personnal_info/IdentityCard.vue";
@@ -87,7 +73,6 @@ export default {
   name: "Content",
   components: {
     Collapsable,
-    Listable,
     Project,
     Education,
     IdentityCard,
