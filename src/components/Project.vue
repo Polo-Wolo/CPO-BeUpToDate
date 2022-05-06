@@ -3,7 +3,7 @@
     <div class="sample-input">
       <h1>
         <strong> My Project </strong>
-        <FormKit type="button" label="Validate" @input="updateValue" />
+        <!-- <FormKit type="button" label="Validate" /> -->
       </h1>
       <br />
       <FormKit type="group" v-model="modelValue">
@@ -60,8 +60,6 @@
       <pre class="form-data">{{ modelValue }}</pre>
     </div>
   </div>
-  <br />
-  <br />
   <br />
 </template>
 

@@ -3,7 +3,6 @@
     <div class="header">
       <slot name="header"></slot>
     </div>
-    <!-- <button @click="toggleContent()">ToggleContent</button> -->
     <FormKit
       type="button"
       :label="'ToggleContent : ' + show_content"
@@ -36,12 +35,10 @@ export default {
 <style scoped>
 .header {
   border: solid 0.2em;
-  /* color: crimson; */
   border-color: crimson;
 }
 .container {
   border: solid 0.2em;
-  /* color: greenyellow; */
   border-color: greenyellow;
 }
 </style>

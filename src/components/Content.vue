@@ -1,22 +1,21 @@
 <template>
   <div class="content">
-    <Collapsable>
+    <!-- <Collapsable>
       <template v-slot:header>
         <strong><p>Project</p></strong>
-        <FormKit type="button" label="add project" @click="addProject()" />
       </template>
+      <FormKit
+        id="addButton"
+        type="button"
+        label="add project"
+        @click="addProject()"
+      />
       <div
         class="list_project"
         v-for="(project, index) in projects"
         :key="project.id"
       >
         <div class="forItem">
-          <!-- <h2>Project values in v-for :</h2>
-          <pre>{{ project }}</pre>
-          <h2>projects values in v-for :</h2>
-          <pre>{{ projects }}</pre>
-          <h2>projects[index] in v-for :</h2>
-          <pre>{{ projects[index] }}</pre> -->
           <Collapsable>
             <Project v-model="projects[index]" />
             <FormKit
@@ -25,9 +24,21 @@
               @click="deleteProject(index)"
             />
           </Collapsable>
-          <!-- <p>{{ project }}</p> -->
         </div>
       </div>
+      <h2>Modeled group values in Content</h2>
+      <pre>{{ projects }}</pre>
+    </Collapsable> -->
+
+    <Collapsable>
+      <template v-slot:header>
+        <strong><p>Project</p></strong>
+      </template>
+      <Listable v-model="projects">
+        <Collapsable>
+          <Project />
+        </Collapsable>
+      </Listable>
       <h2>Modeled group values in Content</h2>
       <pre>{{ projects }}</pre>
     </Collapsable>
@@ -65,6 +76,7 @@
 <script>
 import { defineComponent } from "vue";
 import Collapsable from "./Collapsable.vue";
+import Listable from "./Listable.vue";
 import Project from "./Project.vue";
 import Education from "./Education.vue";
 import IdentityCard from "./personnal_info/IdentityCard.vue";
@@ -75,6 +87,7 @@ export default {
   name: "Content",
   components: {
     Collapsable,
+    Listable,
     Project,
     Education,
     IdentityCard,
@@ -83,7 +96,6 @@ export default {
   },
   data() {
     return {
-      //empty_project: {},
       project_max_id: 0,
       projects: Array(),
       educations: Array(),
@@ -93,9 +105,6 @@ export default {
     };
   },
   methods: {
-    testUpdate() {
-      console.log("testUpdate");
-    },
     addProject() {
       console.log("addProject");
       this.project_max_id++;
@@ -109,31 +118,18 @@ export default {
       if (this.projects.length == 0) {
         this.project_max_id = 0;
       }
-      //this.$delete(this.projects, index);
     },
-    // /*Event handler
-    // Reçoit les données des champs vides du projet quand le component est monté.*/
-    // emptyProject(formData) {
-    //   console.log("emptyProject");
-    //   this.empty_project = formData;
-    //   console.log(formData);
-    //   this.projects.push(formData);
-    // },
   },
 };
 </script>
 <style scoped lang="scss">
 .content {
   border: solid 0.2em;
-  /* color: crimson; */
   border-color: blueviolet;
-  // @apply w-1/3 mx-auto;
 }
 .forItem {
   border: solid 0.2em;
-  /* color: crimson; */
   border-color: orange;
-  // @apply w-1/3 mx-auto;
 }
 </style>
 <!-- <style src="./style.css"/>-->
