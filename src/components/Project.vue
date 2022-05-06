@@ -3,10 +3,10 @@
     <div class="sample-input">
       <h1>
         <strong> My Project </strong>
-        <!-- <FormKit type="button" label="Validate" @input="updateValue" /> -->
+        <FormKit type="button" label="Validate" @input="updateValue" />
       </h1>
       <br />
-      <FormKit type="group" v-model="modelValue" @input="updateValue">
+      <FormKit type="group" v-model="modelValue">
         <!-- Nom Projet -->
         <FormKit
           name="title"
