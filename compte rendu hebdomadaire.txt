@@ -29,3 +29,18 @@ A faire
 Responsive Project View
 Import data for Project View
 Routing project View
+
+06/05/2022
+
+Créer instances de projet, supprimer et données accessibles depuis le contexte principal
+Tab-Bar -> Scss
+Routing-Tab-Bar
+Responsive-project page done and routing ongoing
+
+
+A faire
+Import data for Project View
+Routing project View
+
+Finir tab bar
+Jsonifier les data pour compatibilité avec le template
