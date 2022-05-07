@@ -85,6 +85,9 @@
 
 <script>
 import { defineComponent } from "vue";
+
+import { FormKitSchema } from "@formkit/vue";
+
 import Collapsable from "./Collapsable.vue";
 import Project from "./Project.vue";
 import Education from "./Education.vue";
@@ -121,7 +124,6 @@ export default {
       console.log("addProject");
       this.project_max_id++;
       this.projects.push({ id: this.project_max_id });
-      console.log(this.projects.length);
     },
     deleteProject(index) {
       console.log("deleteProject");
@@ -151,6 +153,11 @@ export default {
       //To do : Ajouter les autre champs
       this.config = Array();
       this.config.push({ projects: this.projects });
+      // var pictures = Array();
+      // if (config.projects.picture) {
+      //   for (var i in onfig.projects.picture) {
+      //   }
+      // }
 
       const data = JSON.stringify(this.config, null, 4);
 

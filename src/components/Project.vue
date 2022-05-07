@@ -53,11 +53,18 @@
           accept=".pdf,.jpg,.png,.psd,.jpeg,.jfif"
           help="Sélectionner une photo de votre projet"
           multiple
+          @input="updateImageURLList()"
         />
       </FormKit>
 
       <h2>Modeled group values</h2>
       <pre class="form-data">{{ modelValue }}</pre>
+      <p>Images :</p>
+      <div v-if="image_URL_List">
+        <div v-for="image_URL in image_URL_List" :key="image_URL">
+          <img :src="image_URL" />
+        </div>
+      </div>
     </div>
   </div>
   <br />
@@ -73,11 +80,21 @@ export default {
     modelValue: "",
   },
   data() {
-    return {};
+    return { image_URL_List: Array() };
   },
   methods: {
     updateValue(event) {
       this.$emit("update:modelValue", this.modelValue);
+    },
+    updateImageURLList() {
+      console.log("updateImageURLList");
+      this.image_URL_List = Array();
+      for (var i of this.modelValue.pictures) {
+        console.log(i.file);
+        var img_URL = URL.createObjectURL(i.file);
+        console.log(img_URL);
+        this.image_URL_List.push(img_URL);
+      }
     },
   },
 };

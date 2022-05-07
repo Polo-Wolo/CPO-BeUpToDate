@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <input id="myinput" type="file" onchange="encode();" />
+    <div id="dummy">
+    </div>
+    <div>
+      <textarea style="width:100%;height:500px;" id="txt">
+      </textarea>
+    </div>
+    <script>
+      function encode() {
+        // Get the file objects that was selected by the user from myinput - a file picker control
+        var selectedfile = document.getElementById("myinput").files;
+        // Check that the user actually selected file/s from the "file picker" control
+        // Note - selectedfile is an array, hence we check it`s length, when length of the array
+        // is bigger than 0 than it means the array containes file objects
+        if (selectedfile.length > 0) {
+          // Set the first file object inside the array to this variable
+          // Note: if multiple files are selected we can itterate on all of the selectedfile array  using a for loop - BUT in order to not make this example complicated we only take the first file object that was selected
+          var imageFile = selectedfile[0];
+          // Set a filereader object to asynchronously read the contents of files (or raw data buffers) stored on the            user's computer, using File or Blob objects to specify the file or data to read. 
+          var fileReader = new FileReader();
+          // We declare an event of the fileReader class (onload event) and we register an anonimous function that will be executed when the event is raised. it is "trick" we preapare in order for the onload event to be raised after the last line of this code will be executed (fileReader.readAsDataURL(imageFile);) - please read about events in javascript if you are not familiar with "Events" 
+          fileReader.onload = function(fileLoadedEvent) {
+            // AT THIS STAGE THE EVENT WAS RAISED
+            // Here we are getting the file contents - basiccaly the base64 mapping
+            var srcData = fileLoadedEvent.target.result;
+            // We create an image html element dinamically in order to display the image
+            var newImage = document.createElement('img');
+            // We set the source of the image we created
+            newImage.src = srcData;
+            // ANOTHER TRICK TO EXTRACT THE BASE64 STRING
+            // We set the outer html of the new image to the div element
+            document.getElementById("dummy").innerHTML = newImage.outerHTML;
+            // Then we take the inner html of the div and we have the base64 string
+            document.getElementById("txt").value = document.getElementById("dummy").innerHTML;
+          }
+          // This line will raise the fileReader.onload event - note we are passing the file object here as an argument to the function of the event  
+          fileReader.readAsDataURL(imageFile);
+        }
+      }
+    </script>
+  </body>
+</html>
