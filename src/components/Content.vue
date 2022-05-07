@@ -1,5 +1,28 @@
 <template>
   <div class="content">
+    <FormKit
+      type="file"
+      label="Sauvegarde à charger"
+      accept=".json"
+      help="Sélectionner le fichier de sauvegarde à charger."
+      v-model="config_file"
+    />
+    <FormKit
+      id="loadConfigFile"
+      type="button"
+      label="Ok"
+      @click="loadConfigFile()"
+    />
+
+    <FormKit
+      id="loadConfigFile"
+      type="button"
+      label="Sauvegarder"
+      @click="saveConfigFile()"
+    />
+
+    <p>Fichier de configuration à charger :{{ config_file }}</p>
+    <p>Configuration à sauvegarder : {{ config }}</p>
     <Collapsable>
       <template v-slot:header>
         <strong><p>Project</p></strong>
@@ -69,6 +92,8 @@ import IdentityCard from "./personnal_info/IdentityCard.vue";
 import WorkExperience from "./WorkExperience.vue";
 import CV from "./CV.vue";
 
+import FileSaver from "file-saver";
+
 export default {
   name: "Content",
   components: {
@@ -87,6 +112,8 @@ export default {
       work_experiences: Array(),
       identity: { adress: {} },
       CV: {},
+      config: Array(),
+      config_file: {},
     };
   },
   methods: {
@@ -103,6 +130,43 @@ export default {
       if (this.projects.length == 0) {
         this.project_max_id = 0;
       }
+    },
+    async loadConfigFile() {
+      console.log("loadConfigFile");
+      console.log(this.config_file);
+      console.log(this.config_file[0].name);
+      console.log(this.config_file[0].file);
+
+      const text = await this.config_file[0].file.text();
+
+      console.log(text);
+
+      const data = JSON.parse(text);
+      console.log(data);
+      console.log(data[0].projects);
+
+      this.projects = data[0].projects;
+    },
+    saveConfigFile() {
+      console.log("saveConfigFile");
+      //var file_name = prompt("Saisissez le nom du fichier");
+
+      //Update config file :
+      this.config = Array();
+      this.config.push({ projects: this.projects });
+
+      const data = JSON.stringify(this.config, null, 4);
+
+      //Remetre le file_name
+      var blob = new Blob([data], {
+        type: "text/plain;charset=utf-8",
+      });
+
+      FileSaver.saveAs(blob, "config.json");
+
+      // saveAs(blob, file_name + ".json");
+      //var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8",});
+      //FileSaver.saveAssaveAs(blob, "hello world.txt");
     },
   },
 };
