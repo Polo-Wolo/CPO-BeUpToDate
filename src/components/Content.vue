@@ -133,40 +133,32 @@ export default {
     },
     async loadConfigFile() {
       console.log("loadConfigFile");
-      console.log(this.config_file);
-      console.log(this.config_file[0].name);
-      console.log(this.config_file[0].file);
 
       const text = await this.config_file[0].file.text();
 
-      console.log(text);
+      //console.log(text);
 
       const data = JSON.parse(text);
-      console.log(data);
-      console.log(data[0].projects);
-
+      //console.log(data);
+      //console.log(data[0].projects);
       this.projects = data[0].projects;
     },
     saveConfigFile() {
       console.log("saveConfigFile");
-      //var file_name = prompt("Saisissez le nom du fichier");
+      var file_name = prompt("Saisissez le nom du fichier (sans l'extension");
 
       //Update config file :
+      //To do : Ajouter les autre champs
       this.config = Array();
       this.config.push({ projects: this.projects });
 
       const data = JSON.stringify(this.config, null, 4);
 
-      //Remetre le file_name
       var blob = new Blob([data], {
         type: "text/plain;charset=utf-8",
       });
 
-      FileSaver.saveAs(blob, "config.json");
-
-      // saveAs(blob, file_name + ".json");
-      //var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8",});
-      //FileSaver.saveAssaveAs(blob, "hello world.txt");
+      FileSaver.saveAs(blob, file_name + ".json");
     },
   },
 };
