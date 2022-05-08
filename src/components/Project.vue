@@ -57,6 +57,13 @@
         />
       </FormKit>
 
+      <FormKit
+        id="loadConfigFile"
+        type="button"
+        label="Update image"
+        @click="updateImageURLList()"
+      />
+
       <h2>Modeled group values</h2>
       <pre class="form-data">{{ modelValue }}</pre>
       <p>Images :</p>

@@ -3,7 +3,7 @@
     <FormKit
       type="file"
       label="Sauvegarde à charger"
-      accept=".json"
+      accept=".zip"
       help="Sélectionner le fichier de sauvegarde à charger."
       v-model="config_file"
     />
@@ -139,14 +139,89 @@ export default {
     async loadConfigFile() {
       console.log("loadConfigFile");
 
-      const text = await this.config_file[0].file.text();
+      console.log(this.config_file);
 
-      //console.log(text);
+      var blob = new Blob([this.config_file[0].file], {
+        type: "application/octet-binary",
+      });
 
-      const data = JSON.parse(text);
-      //console.log(data);
-      //console.log(data[0].projects);
-      this.projects = data[0].projects;
+      console.log(blob);
+
+      var zip = new JSZip();
+      var zip_content = zip.loadAsync(blob /* = file blob */).then(
+        async function (zip) {
+          console.log("zip");
+          console.log(zip);
+
+          var config_json = await zip.file("config.json").async("text");
+          // console.log("config_json");
+          // console.log(config_json);
+
+          //var config_json = zip.files["config.json"];
+          //const text = await config_json.text();
+          //console.log("text");
+          //console.log(text);
+
+          //console.log("text");
+          //console.log(text);
+
+          const data_config = await JSON.parse(config_json);
+          // console.log("data_config");
+          // console.log(data_config);
+
+          // console.log("data_config[0].projects");
+          // console.log(data_config[0].projects);
+
+          // console.log("this.projects");
+          // console.log(this.projects);
+
+          this.projects = data_config[0].projects;
+
+          zip.folder("images").forEach(
+            async function (relativePath, file) {
+              for (var i of this.projects) {
+                console.log("i");
+                console.log(i);
+                for (var ii of i.pictures) {
+                  console.log("ii");
+                  console.log(ii);
+
+                  console.log("file.name");
+                  console.log(file.name);
+
+                  console.log("ii.name");
+                  console.log(ii.name);
+
+                  if (file.name == "images/" + ii.name) {
+                    console.log("Match");
+                    ii.file = new File(
+                      [await zip.file(file.name).async("blob")],
+                      file.name
+                    );
+                    console.log(ii.file);
+                  }
+                }
+              }
+            }.bind(this)
+          );
+
+          //var images = zip[""];
+          // process ZIP file content here
+          alert("OK");
+        }.bind(this),
+        function () {
+          alert("Not a valid zip file");
+        }.bind(this)
+      );
+
+      // const text = await this.config_file[0].file.text();
+
+      // //console.log(text);
+
+      // const data_config = JSON.parse(text);
+      // //console.log(data);
+      // //console.log(data[0].projects);
+      // this.projects = data_config[0].projects;
     },
     saveConfigFile() {
       console.log("saveConfigFile");
