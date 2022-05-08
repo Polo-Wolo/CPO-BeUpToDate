@@ -97,6 +97,9 @@ import CV from "./CV.vue";
 
 import FileSaver from "file-saver";
 
+import JSZip from "jszip";
+//import fs from "fs";
+
 export default {
   name: "Content",
   components: {
@@ -159,13 +162,60 @@ export default {
       //   }
       // }
 
-      const data = JSON.stringify(this.config, null, 4);
+      //const JSZip = require("jszip");
+      //const fs = require("fs");
 
-      var blob = new Blob([data], {
-        type: "text/plain;charset=utf-8",
+      const zip = new JSZip();
+
+      const data_config = JSON.stringify(this.config, null, 4);
+
+      // var blob = new Blob([data], {
+      //   type: "text/plain;charset=utf-8",
+      // });
+
+      // FileSaver.saveAs(blob, file_name + ".json");
+
+      //const pdfData = fs.readFileSync("sample.pdf");
+      zip.file("config.json", data_config);
+
+      //zip.file("Textfile.txt", "Hello NodeJS\n");
+
+      const images = Array(); //["coding-science.jpg", "programming-languages.jpg"];
+
+      for (var i of this.projects) {
+        if (i.pictures) {
+          for (var ii of i.pictures) {
+            images.push(ii);
+          }
+        }
+      }
+
+      console.log(images);
+
+      const img = zip.folder("images");
+
+      for (const image of images) {
+        //const imageData = fs.readFileSync(image);
+        img.file(image.name, image.file);
+      }
+
+      // var blob = new Blob([zip], {
+      //   type: "text/plain;charset=utf-8",
+      // });
+
+      zip.generateAsync({ type: "blob" }).then(function (content) {
+        console.log("after zip generate");
+        saveAs(content, file_name + ".zip");
       });
 
-      FileSaver.saveAs(blob, file_name + ".json");
+      //FileSaver.saveAs(zip, file_name + ".zip");
+
+      // zip
+      //   .generateNodeStream({ type: "nodebuffer", streamFiles: true })
+      //   .pipe(fs.createWriteStream(file_name + ".zip"))
+      //   .on("finish", function () {
+      //     console.log(file_name + ".zip written.");
+      //   });
     },
   },
 };
