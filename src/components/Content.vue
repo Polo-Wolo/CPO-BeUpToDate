@@ -156,32 +156,16 @@ export default {
       //To do : Ajouter les autre champs
       this.config = Array();
       this.config.push({ projects: this.projects });
-      // var pictures = Array();
-      // if (config.projects.picture) {
-      //   for (var i in onfig.projects.picture) {
-      //   }
-      // }
-
-      //const JSZip = require("jszip");
-      //const fs = require("fs");
 
       const zip = new JSZip();
 
       const data_config = JSON.stringify(this.config, null, 4);
 
-      // var blob = new Blob([data], {
-      //   type: "text/plain;charset=utf-8",
-      // });
-
-      // FileSaver.saveAs(blob, file_name + ".json");
-
-      //const pdfData = fs.readFileSync("sample.pdf");
       zip.file("config.json", data_config);
 
-      //zip.file("Textfile.txt", "Hello NodeJS\n");
+      const images = Array();
 
-      const images = Array(); //["coding-science.jpg", "programming-languages.jpg"];
-
+      //Récupère les images dans les diférents projets
       for (var i of this.projects) {
         if (i.pictures) {
           for (var ii of i.pictures) {
@@ -190,32 +174,18 @@ export default {
         }
       }
 
-      console.log(images);
+      //console.log(images);
 
       const img = zip.folder("images");
 
       for (const image of images) {
-        //const imageData = fs.readFileSync(image);
         img.file(image.name, image.file);
       }
-
-      // var blob = new Blob([zip], {
-      //   type: "text/plain;charset=utf-8",
-      // });
 
       zip.generateAsync({ type: "blob" }).then(function (content) {
         console.log("after zip generate");
         saveAs(content, file_name + ".zip");
       });
-
-      //FileSaver.saveAs(zip, file_name + ".zip");
-
-      // zip
-      //   .generateNodeStream({ type: "nodebuffer", streamFiles: true })
-      //   .pipe(fs.createWriteStream(file_name + ".zip"))
-      //   .on("finish", function () {
-      //     console.log(file_name + ".zip written.");
-      //   });
     },
   },
 };
