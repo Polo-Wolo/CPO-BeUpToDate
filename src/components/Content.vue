@@ -52,6 +52,9 @@
       <h2>Modeled group values in Content</h2>
       <pre>{{ projects }}</pre>
     </Collapsable>
+    <h2>Config :</h2>
+    <!-- Afficher rien quand j'afficher juste config -->
+    <pre>{{ config.projects }}</pre>
 
     <!-- <Collapsable>
       <template v-slot:header>
@@ -122,6 +125,22 @@ export default {
       config_file: {},
     };
   },
+  watch: {
+    projects: {
+      handler(new_value, old_value) {
+        //console.log("Watcher");
+        this.projects = new_value;
+        //console.log(this.projects);
+        //updateConfigFile();
+        //this.config = Array();
+        this.config.projects = this.projects;
+        // console.log("this.config");
+        // console.log(this.config);
+        this.$emit("update:modelValue", this.config);
+      },
+      deep: true,
+    },
+  },
   methods: {
     addProject() {
       console.log("addProject");
@@ -136,10 +155,15 @@ export default {
         this.project_max_id = 0;
       }
     },
+    //Remplacé par les watchers
+    updateConfigFile() {
+      this.config = Array();
+      this.config.push({ projects: this.projects });
+    },
     async loadConfigFile() {
       console.log("loadConfigFile");
 
-      console.log(this.config_file);
+      //console.log(this.config_file);
 
       var blob = new Blob([this.config_file[0].file], {
         type: "application/octet-binary",
@@ -150,8 +174,8 @@ export default {
       var zip = new JSZip();
       var zip_content = zip.loadAsync(blob /* = file blob */).then(
         async function (zip) {
-          console.log("zip");
-          console.log(zip);
+          // console.log("zip");
+          // console.log(zip);
 
           var config_json = await zip.file("config.json").async("text");
           // console.log("config_json");
@@ -180,25 +204,25 @@ export default {
           zip.folder("images").forEach(
             async function (relativePath, file) {
               for (var i of this.projects) {
-                console.log("i");
-                console.log(i);
+                // console.log("i");
+                // console.log(i);
                 for (var ii of i.pictures) {
-                  console.log("ii");
-                  console.log(ii);
+                  // console.log("ii");
+                  // console.log(ii);
 
-                  console.log("file.name");
-                  console.log(file.name);
+                  // console.log("file.name");
+                  // console.log(file.name);
 
-                  console.log("ii.name");
-                  console.log(ii.name);
+                  // console.log("ii.name");
+                  // console.log(ii.name);
 
                   if (file.name == "images/" + ii.name) {
-                    console.log("Match");
+                    // console.log("Match");
                     ii.file = new File(
                       [await zip.file(file.name).async("blob")],
                       file.name
                     );
-                    console.log(ii.file);
+                    // console.log(ii.file);
                   }
                 }
               }
@@ -229,8 +253,9 @@ export default {
 
       //Update config file :
       //To do : Ajouter les autre champs
-      this.config = Array();
-      this.config.push({ projects: this.projects });
+      // this.config = Array();
+      // this.config.push({ projects: this.projects });
+      updateConfigFile();
 
       const zip = new JSZip();
 
