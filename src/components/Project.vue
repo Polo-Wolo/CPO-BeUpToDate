@@ -1,6 +1,7 @@
 <template>
   <div class="container mx-auto">
     <div class="sample-input">
+<<<<<<< HEAD
       <h1><center>
         <strong> My Project </strong></center>
         <!-- <FormKit type="button" label="Validate" @input="updateValue" /> -->
@@ -8,6 +9,14 @@
       <br />
       <center>
       <FormKit type="group" v-model="modelValue" @input="updateValue">
+=======
+      <h1>
+        <strong> My Project </strong>
+        <FormKit type="button" label="Validate" @input="updateValue" />
+      </h1>
+      <br />
+      <FormKit type="group" v-model="modelValue">
+>>>>>>> db6ae7b0f01808ba891c205e5a13d15d94f3d4e5
         <!-- Nom Projet -->
         <FormKit
           name="title"

@@ -1,20 +1,17 @@
 <template>
   <div class="container">
-    <slot name="header"></slot>
-    <br />
+    <div class="header">
+      <slot name="header"></slot>
+    </div>
     <!-- <button @click="toggleContent()">ToggleContent</button> -->
     <FormKit
       type="button"
       :label="'ToggleContent : ' + show_content"
       @click="toggleContent()"
     />
-    <br />
     <div class="content" v-if="show_content">
-      <br />
       <slot></slot>
-      <br />
     </div>
-    <br />
   </div>
 </template>
 
@@ -36,3 +33,15 @@ export default {
 };
 </script>
 <style src="./style.css"/>
+<style scoped>
+.header {
+  border: solid 0.2em;
+  /* color: crimson; */
+  border-color: crimson;
+}
+.container {
+  border: solid 0.2em;
+  /* color: greenyellow; */
+  border-color: greenyellow;
+}
+</style>
