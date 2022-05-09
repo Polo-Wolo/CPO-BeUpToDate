@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <div class="sample-input">
       <h1>
-        <strong> My Work Experience</strong>
+        <strong><center>My Work Experience</center></strong>
       </h1>
       <br />
-      <FormKit type="group" v-model="formData">
+      <center> <FormKit type="group" v-model="formData">
         <!-- Nom Société -->
         <FormKit
           name="company"
@@ -66,6 +66,7 @@
           :options="['Stage', 'CDI', 'CDD', 'Job étudiant']"
         />
       </FormKit>
+      </center>
 
       <h2>Modeled group values</h2>
       <pre class="form-data">{{ formData }}</pre>
@@ -74,7 +75,7 @@
   <br /><br /><br />
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from "vue";
 
 export default {
@@ -95,4 +96,4 @@ export default {
 };
 </script>
 
-<style src="./style.css"/>
+<style lang="scss" scoped></style>

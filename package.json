@@ -9,7 +9,9 @@
   "dependencies": {
     "@formkit/themes": "^1.0.0-beta.5",
     "@formkit/vue": "^1.0.0-beta.5",
-    "vue": "^3.2.25"
+    "sass": "^1.51.0",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",

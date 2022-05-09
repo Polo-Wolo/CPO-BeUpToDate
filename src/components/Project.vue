@@ -1,11 +1,12 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <div class="sample-input">
-      <h1>
-        <strong> My Project </strong>
+      <h1><center>
+        <strong> My Project </strong></center>
         <!-- <FormKit type="button" label="Validate" @input="updateValue" /> -->
       </h1>
       <br />
+      <center>
       <FormKit type="group" v-model="modelValue" @input="updateValue">
         <!-- Nom Projet -->
         <FormKit
@@ -55,7 +56,7 @@
           multiple
         />
       </FormKit>
-
+      </center>
       <h2>Modeled group values</h2>
       <pre class="form-data">{{ modelValue }}</pre>
     </div>
@@ -85,4 +86,5 @@ export default {
 };
 </script>
 
-<style src="./style.css"/>
+<style lang="scss" scoped>
+</style>

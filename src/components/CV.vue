@@ -1,10 +1,12 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <div class="sample-input">
+      
       <h1>
-        <strong> CV </strong>
+      <center><strong> CV </strong></center>
       </h1>
       <br />
+      <center>
       <FormKit type="group" v-model="formData">
         <!-- Name -->
         <FormKit
@@ -21,7 +23,7 @@
           validation-behavior="live"
         />
       </FormKit>
-
+      </center>
       <h2>Modeled group values</h2>
       <pre class="form-data">{{ formData }}</pre>
     </div>
@@ -31,7 +33,7 @@
   <br />
 </template>
 
-<script>
+<script lang ='ts'>
 import { ref } from "vue";
 
 export default {
@@ -52,4 +54,6 @@ export default {
 };
 </script>
 
-<style src="./style.css"/>
+<style lang="scss" scoped>
+
+</style>

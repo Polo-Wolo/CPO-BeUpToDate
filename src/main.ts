@@ -4,4 +4,6 @@ import { plugin, defaultConfig } from "@formkit/vue";
 import "@formkit/themes/genesis";
 import './index.css'
 
-createApp(App).use(plugin, defaultConfig).mount("#app");
+import router from './router'
+
+createApp(App).use(plugin, defaultConfig).use(router).mount("#app");

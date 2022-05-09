@@ -1,10 +1,11 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <div class="sample-input">
-      <h1>
-        <strong>My Education</strong>
+      <h1><center>
+      <strong>My Education</strong></center>
       </h1>
       <br />
+      <center>
       <FormKit type="group" v-model="formData">
         <!-- Nom  -->
         <FormKit
@@ -51,14 +52,16 @@
           placeholder="Remember to write in complete sentences."
         />
       </FormKit>
+      </center>
       <h2>Modeled group values</h2>
+
       <pre class="form-data">{{ formData }}</pre>
     </div>
   </div>
   <br /><br /><br />
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from "vue";
 
 export default {
@@ -79,4 +82,7 @@ export default {
 };
 </script>
 
-<style src="./style.css"/>
+<!-- <style src="./style.css"/> -->
+<style lang="scss" scoped>
+
+</style>
