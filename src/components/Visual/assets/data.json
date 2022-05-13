@@ -1,0 +1,243 @@
+{
+	"educations": [
+		{
+			"title": "Generalist Engineer",
+			"location": "École Nationale d'Ingénieur de Brest",
+			"date": "2019-Ongoing",
+			"content": [
+				"I am currently studying at ENIB to become a general engineer in electronics, computer science and mechatronics."
+			],
+			"type": ""
+		},
+		{
+			"title": "Volunteer as a Vacation Camp Animator",
+			"location": "Châteaulin",
+			"date": "Juil. 2020",
+			"content": [
+				"I was a volunteer animator for a vacation camp in the ESTIVAL association of the Mennaisian community."
+			],
+			"type": "volunteering"
+		},
+		{
+			"title": "Sauveteur Secouriste du Travail - SST",
+			"location": "Landerneau",
+			"date": "Jan. 2020",
+			"content": [
+				"Awarded of the Sauveteur Secouriste du Travail (First Aid at Work)"
+			],
+			"type": ""
+		},
+		{
+			"title": "Scientific Baccalauréat",
+			"location": "Lycée Saint-Louis  - Châteaulin",
+			"date": "Juil. 2019",
+			"content": [
+				"Awarded of Baccalauréat with distinction at Saint-Louis high school in Châteaulin.",
+				" - Specialization Computer Science and Digital Science",
+				" - European section and Breton"
+			],
+			"type": ""
+		},
+		{
+			"title": "BNSSA",
+			"location": "Landerneau",
+			"date": "Avr. 2020",
+			"content": [
+				"Awarded of Brevet National de Sécurité et de Sauvetage Aquatique (National Aquatic Safety and Rescue Certificate).",
+				"This is a French aquatic safety certification."
+			],
+			"type": ""
+		},
+		{
+			"title": "Premiers Secours en Equipe de niveau 1 - PSE1",
+			"location": "Landerneau",
+			"date": "Avr. 2020",
+			"content": [
+				"Awarded of Premiers Secours en Équipe de niveau 1 (the First Aid Team Level 1) certification."
+			],
+			"type": ""
+		},
+		{
+			"title": "Solidarity journey in Haïti",
+			"location": "Port au Prince - Haïti",
+			"date": "Oct. 2017",
+			"content": [
+				"Solidarity stay with young Haïtians from the Noël des Anges Centre (educational center for young people in advanced poverty)."
+			],
+			"type": "volunteering"
+		},
+		{
+			"title": "PET for School",
+			"location": "Lycée Saint-Louis  - Châteaulin",
+			"date": "Juin 2017",
+			"content": [
+				"Awarded PET for School.",
+				"English level : B1 Cambridge."
+			],
+			"type": ""
+		}
+	],
+	"workexperiences": [
+		{
+			"society": "BreizElec",
+			"society_link": "https://www.breizelec.fr/",
+			"type": "Internship",
+			"date": "Fevr. 2021",
+			"time": "1 month",
+			"content": [
+				"Component insertion and assembly of electronic equipment.",
+				"Realized at Châteaulin 29."
+			]
+		},
+		{
+			"society": "BNP Paribas",
+			"society_link": "https://group.bnpparibas/",
+			"type": "CDD",
+			"date": "Juil. 2020",
+			"time": "1 month",
+			"content": [
+				"Reception in a departmental agency for a month",
+				" - Customer reception, management of routine requests and commercial activity",
+				"Realized at Châteaulin 29."
+			]
+		},
+		{
+			"society": "BNP Paribas",
+			"society_link": "https://group.bnpparibas/",
+			"type": "CDD",
+			"date": "Juil. 2019",
+			"time": "1 month",
+			"content": [
+				"Reception in a departmental agency for a month",
+				" - Customer reception, management of routine requests and commercial activity",
+				"Realized at Châteaulin 29."
+			]
+		},
+		{
+			"society": "Advance Ride",
+			"society_link": "http://adr-cablepark.fr/",
+			"type": "Internship",
+			"date": "Avr. 2018",
+			"time": "2 weeks",
+			"content": [
+				"Internship to discover water teleski operator's job at Advance Ride.",
+				"Realized at Saint-Renan 29."
+			]
+		},
+		{
+			"society": "Altéor Environnement",
+			"society_link": "https://www.alteor-environnement.com/",
+			"type": "Internship",
+			"date": "Fevr. 2016",
+			"time": "2 weeks",
+			"content": [
+				"Internship to discover the job of environmental manager at Alteor environnement.",
+				"Realized at Saint-Thonan 29."
+			]
+		}
+	],
+	"projects": [
+		{
+			"title": "Allosaurus",
+			"type": "Manual creation",
+			"date": "Avr. 2022",
+			"time": "2 weeks",
+			"content": [
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+				"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo.",
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo."
+			],
+			"pictures_url": [
+				"https://randomwordgenerator.com/img/picture-generator/53e7d44b4a5aa514f1dc8460962e33791c3ad6e04e507749702c73d1924cc2_640.jpg",
+				"https://picsum.photos/300/200",
+				"https://picsum.photos/300/200"
+			],
+			"id": 0
+		},
+		{
+			"title": "MicroRaptor",
+			"type": "Manual creation",
+			"date": "Fevr. 2016",
+			"time": "2 weeks",
+			"content": [
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+				"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo.",
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo."
+			],
+			"pictures_url": [
+				"https://randomwordgenerator.com/img/picture-generator/52e7d3474b50a914f1dc8460962e33791c3ad6e04e50744172277fd0974ecd_640.jpg",
+				"https://picsum.photos/300/200",
+				"https://picsum.photos/300/200"
+			],
+			"id": 1
+		},
+		{
+			"title": "Lighthouse Post",
+			"type": "Manual creation",
+			"date": "Fevr. 2016",
+			"time": "2 weeks",
+			"content": [
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+				"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo.",
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo."
+			],
+			"pictures_url": [
+				"https://images.unsplash.com/photo-1484589065579-248aad0d8b13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHJhbmRvbSUyMGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+				"https://picsum.photos/300/200",
+				"https://picsum.photos/300/200"
+			],
+			"id": 2
+		},
+		{
+			"title": "Synthetic mind",
+			"type": "Manual creation",
+			"date": "Fevr. 2016",
+			"time": "2 weeks",
+			"content": [
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+				"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo.",
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo."
+			],
+			"pictures_url": [
+				"https://randomwordgenerator.com/img/picture-generator/51e6dd444a54b10ff3d8992cc12c30771037dbf85254794e732f7bd49344_640.jpg",
+				"https://picsum.photos/300/200",
+				"https://picsum.photos/300/200"
+			],
+			"id": 3
+		},
+		{
+			"title": "Virtual Revolution",
+			"type": "Manual creation",
+			"date": "Fevr. 2016",
+			"time": "2 weeks",
+			"content": [
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+				"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo.",
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo."
+			],
+			"pictures_url": [
+				"https://randomwordgenerator.com/img/picture-generator/54e0d3434a56b10ff3d8992cc12c30771037dbf85254794e70267cdc9544_640.jpg",
+				"https://picsum.photos/300/200",
+				"https://picsum.photos/300/200"
+			],
+			"id": 4
+		},
+		{
+			"title": "Optimal Vision",
+			"type": "Manual creation",
+			"date": "Fevr. 2016",
+			"time": "2 weeks",
+			"content": [
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+				"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo.",
+				"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo."
+			],
+			"pictures_url": [
+				"https://randomwordgenerator.com/img/picture-generator/52e6d0444c56aa14f1dc8460962e33791c3ad6e04e5074417c2d78d2934fc6_640.jpg",
+				"https://picsum.photos/300/200",
+				"https://picsum.photos/300/200"
+			],
+			"id": 5
+		}
+	]
+}
