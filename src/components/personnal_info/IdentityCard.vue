@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="sample-input">
-      <h1>
+      <center><h1>
         <strong>Identity</strong>
-      </h1>
-
+      </h1></center>
+      <center>
       <FormKit type="group" v-model="formData">
         <!-- Nom -->
         <FormKit
@@ -77,6 +77,7 @@
         />
         <Adress />
       </FormKit>
+      </center>
 
       <h2>Modeled group values</h2>
       <pre class="form-data">{{ formData }}</pre>

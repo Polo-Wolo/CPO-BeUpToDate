@@ -1,17 +1,15 @@
 <template>
-  <Content v-model="config" />
-  <TestAffichageConfig v-model="config" />
+  <Tab1></Tab1>
   <div class="selection:bg-green-100"></div>
 </template>
 
+
 <script>
 import { defineComponent } from "vue";
-import Content from "./components/Content.vue";
-import TestAffichageConfig from "./components/TestAffichageConfig.vue";
-
+import Tab1 from "./components/TabBar/Tab1.vue";
 export default {
   name: "App",
-  components: { Content, TestAffichageConfig },
+  components: {Tab1},
   data() {
     return { config: {} };
   },

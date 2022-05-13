@@ -13,7 +13,9 @@
     "fs": "^0.0.1-security",
     "jszip": "^3.9.1",
     "sass": "^1.51.0",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-html-editor": "^0.2.1",
+    "vue3-tabs-component": "^1.0.7"
   },
   "devDependencies": {
     "@types/file-saver": "^2.0.5",
