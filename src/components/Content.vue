@@ -290,14 +290,15 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss">
-.content {
-  border: solid 0.2em;
-  border-color: blueviolet;
-}
-.forItem {
-  border: solid 0.2em;
-  border-color: orange;
-}
+// <style scoped lang="scss">
+// .content {
+//   border: solid 0.2em;
+//   border-color: blueviolet;
+// }
+// .forItem {
+//   border: solid 0.2em;
+//   border-color: orange;
+// }
+//
 </style>
 <!-- <style src="./style.css"/>-->

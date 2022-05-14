@@ -6,8 +6,8 @@
 
 <script>
 import { defineComponent } from "vue";
-import Content from "./components/Form/Content.vue";
-import TestAffichageConfig from "./components/Form/TestAffichageConfig.vue";
+import Content from "./components/Content.vue";
+import TestAffichageConfig from "./components/TestAffichageConfig.vue";
 
 export default {
   name: "App",
