@@ -1,6 +1,17 @@
 {
-  "name": "template-vite-vue-ts-tailwind-v3",
-  "version": "0.0.0",
+  "name": "content_build",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/content.umd.js",
+  "module": "./dist/content.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/content.es.js",
+      "require": "./dist/content.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
@@ -8,7 +19,7 @@
   },
   "dependencies": {
     "@formkit/themes": "^1.0.0-beta.5",
-    "@formkit/vue": "^1.0.0-beta.5",
+    "@formkit/vue": "^1.0.0-beta.8",
     "file-saver": "^2.0.5",
     "fs": "^0.0.1-security",
     "jszip": "^3.9.1",
