@@ -6,7 +6,7 @@
       accept=".zip"
       help="Sélectionner le fichier de sauvegarde à charger."
       v-model="config_file"
-    />
+    />./components/Form/Content.vue
     <FormKit
       id="loadConfigFile"
       type="button"
@@ -91,12 +91,12 @@ import { defineComponent } from "vue";
 
 import { FormKitSchema } from "@formkit/vue";
 
-import Collapsable from "./components/Collapsable.vue";
-import Project from "./components/Project.vue";
-import Education from "./components/Education.vue";
-import IdentityCard from "./components/personnal_info/IdentityCard.vue";
-import WorkExperience from "./components/WorkExperience.vue";
-import CV from "./components/CV.vue";
+import Collapsable from "./components/Form/Collapsable.vue";
+import Project from "./components/Form/Project.vue";
+// import Education from "./components/Education.vue";
+// import IdentityCard from "./components/personnal_info/IdentityCard.vue";
+// import WorkExperience from "./components/WorkExperience.vue";
+// import CV from "./components/CV.vue";
 
 import FileSaver from "file-saver";
 
@@ -108,10 +108,10 @@ export default {
   components: {
     Collapsable,
     Project,
-    Education,
-    IdentityCard,
-    WorkExperience,
-    CV,
+    // Education,
+    // IdentityCard,
+    // WorkExperience,
+    // CV,
   },
   data() {
     return {

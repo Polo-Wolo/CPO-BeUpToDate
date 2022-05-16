@@ -68,8 +68,8 @@
       <pre class="form-data">{{ modelValue }}</pre>
       <p>Images :</p>
       <div v-if="image_URL_List">
-        <div v-for="image_URL in image_URL_List" :key="image_URL">
-          <img :src="image_URL" />
+        <div v-for="picture in modelValue.pictures" :key="picture">
+          <img :src="URL.createObjectURL(picture.file)" />
         </div>
       </div>
     </div>
@@ -93,18 +93,18 @@ export default {
     updateValue(event) {
       this.$emit("update:modelValue", this.modelValue);
     },
-    updateImageURLList() {
-      console.log("updateImageURLList");
-      this.image_URL_List = Array();
-      for (var i of this.modelValue.pictures) {
-        console.log(i.file);
-        var img_URL = URL.createObjectURL(i.file);
-        console.log(img_URL);
-        this.image_URL_List.push(img_URL);
-      }
-    },
+    // updateImageURLList() {
+    //   console.log("updateImageURLList");
+    //   this.image_URL_List = Array();
+    //   for (var i of this.modelValue.pictures) {
+    //     console.log(i.file);
+    //     var img_URL = URL.createObjectURL(i.file);
+    //     console.log(img_URL);
+    //     this.image_URL_List.push(img_URL);
+    //   }
+    // },
   },
 };
 </script>
 
-<style src="./style.css"/>
+<style src="../style.css"/>

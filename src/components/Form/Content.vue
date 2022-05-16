@@ -92,11 +92,11 @@ import { defineComponent } from "vue";
 import { FormKitSchema } from "@formkit/vue";
 
 import Collapsable from "./Collapsable.vue";
-import Project from "./Project.vue";
-import Education from "./Education.vue";
-import IdentityCard from "./personnal_info/IdentityCard.vue";
-import WorkExperience from "./WorkExperience.vue";
-import CV from "./CV.vue";
+import Project from "../Form/Project.vue";
+// import Education from "../Education.vue";
+// import IdentityCard from "../personnal_info/IdentityCard.vue";
+// import WorkExperience from "../WorkExperience.vue";
+// import CV from "../CV.vue";
 
 import FileSaver from "file-saver";
 
@@ -108,10 +108,10 @@ export default {
   components: {
     Collapsable,
     Project,
-    Education,
-    IdentityCard,
-    WorkExperience,
-    CV,
+    // Education,
+    // IdentityCard,
+    // WorkExperience,
+    // CV,
   },
   data() {
     return {

@@ -31,7 +31,7 @@ export default {
   },
 };
 </script>
-<style src="./style.css"/>
+<style src="../style.css"/>
 <style scoped>
 .header {
   border: solid 0.2em;
