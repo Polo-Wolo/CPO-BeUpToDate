@@ -38,7 +38,7 @@ Routing project View
 
 
 
-29/04/2022 ???????????
+29/04/2022
 
 Sytème de sauvegarde de la configuration dans un ficher
 Sytème d'import de la configuration à partir d'un fichier
@@ -64,7 +64,7 @@ Jsonifier les data pour compatibilité avec le template
 
 
 
-13/05/2022 ??????????
+13/05/2022
 
 Première tentative de fusion du formulaire et du template (grosse difficulté)
 Ajout (non concluant) d'un système d'onglets dans le formulaire
@@ -74,7 +74,7 @@ Ajout (non concluant) d'un système d'onglets dans le formulaire
 
 
 
-20/05/2022 (Soutenance) ????????????
+20/05/2022 (Soutenance)
 
 Fusion du formulaire et du template en utlisant le syteme de destion d'état VueX
 Finalisation de la présentation
